@@ -1,0 +1,19 @@
+.Search {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.Search input {
+  margin-right: 10px;
+  border-radius: 10px;
+  width: 30%;
+  height: 30px;
+}
+
+.Search input.placeholder {
+  text-align: center;
+}
+.Search button {
+  cursor: pointer;
+}

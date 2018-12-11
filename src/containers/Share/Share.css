@@ -1,0 +1,50 @@
+.ShareCard{
+    width: 300px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.RouteLink{
+    text-decoration: none;
+    color: black;
+}
+
+.ShowBooks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.Book1 {
+    width: 30%;
+    /* padding: 16px; */
+    /* text-align: center; */
+    box-shadow: 0 2px 3px #ccc;
+    /* margin-top: 0px; */
+    margin: 10px;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(8, 0, 0); */
+    cursor: pointer;
+    height: 275px   ;
+   color: transparent;
+   justify-content: center;
+  }
+
+  .FullPost1 {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid rgb(8, 0, 0);
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  

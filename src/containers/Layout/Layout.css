@@ -1,0 +1,42 @@
+.Books {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.Modal {
+  width: 50px;
+  max-height: 250px;
+  background-color: white;
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+
+.StaticCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  height: 100%;
+}
+
+.StaticCard {
+  width: 300px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid rgb(10, 0, 0);
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.RouteLink {
+  text-decoration: none;
+  color: black;
+}

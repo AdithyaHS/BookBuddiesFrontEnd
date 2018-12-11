@@ -1,0 +1,30 @@
+.Author {
+    margin: 16px 0;
+    color: black;
+    margin-left: 50px;
+}
+
+.FlexContainer{
+    display: flex;
+    display: -webkit-flex;
+}
+
+.h4{
+    color: black;
+    margin-left: 50px;
+    margin: 16px 0;
+}
+.article{
+    color: black;
+}
+
+.Button{
+    width: 100%;
+    height: 50px;
+    align-self: center;
+}
+
+.ImageDiv{
+    width:200px;
+    height:auto;
+}
