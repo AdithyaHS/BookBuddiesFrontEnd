@@ -28,7 +28,15 @@ const styles = theme => ({
     },
     rightIcon: {
       marginLeft: theme.spacing.unit
-    }
+    },
+    paper: {
+        position: 'absolute',
+        width: theme.spacing.unit * 50,
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing.unit * 4,
+        height: '200px'
+      }
   });
 
 class ModalDialog extends Component {
@@ -41,7 +49,7 @@ class ModalDialog extends Component {
         const { classes } = this.props;
         if(this.props.isLoggedIn){
             reportButton = 
-            <Button className={classes.button} variant="contained" style={{float:"left",backgroundColor:"#f50057"}} onClick={()=>this.props.reportButtonClick(this.props.currentBook.id)} color="secondary">
+            <Button className={classes.button} variant="contained" style={{position:"absolute",float:"left",backgroundColor:"#f50057"}} onClick={()=>this.props.reportButtonClick(this.props.currentBook.id)} color="secondary">
                    <img src={ReportIcon} alt="report icon" width="20px" height="20px" />
                    &nbsp;&nbsp;Report
                 </Button>
@@ -55,6 +63,7 @@ class ModalDialog extends Component {
 
         if(this.props.shouldOpen){
             modal=
+            <div className={classes.paper}>
             <Dialog
                 open={this.props.shouldOpen}
                 onClose={this.props.close}
@@ -66,7 +75,7 @@ class ModalDialog extends Component {
                     onInput={this.props.titleChange.bind(this)}
                 >
                 {this.props.currentBook.title} </DialogTitle>
-                <DialogContent>
+                <DialogContent style={{height:"500px"}}>
                     <div className ="FlexContainer">
                         <div className="ImageDiv">
                             {editableImage}
@@ -98,15 +107,18 @@ class ModalDialog extends Component {
                             </p>
                         </article>
                     </DialogContentText>
-                </DialogContent>
-                <div className ="Button"  style={{display:"flex"}}>
+                    </DialogContent>
+                
+                <div className ="Button"  style={{display:"flex",overflow:"hidden",height:"60px"}}>
                 {reportButton}
                 <Button className={classes.button} style={{position: "absolute",right: "0"}} variant="contained" onClick={()=>this.props.bookButtonClick(this.props.currentBook.id)} color="primary">
                   <img src={this.props.imageUrl} width="20px" height="20px"/>
                   &nbsp;&nbsp;{this.props.buttonText}
                 </Button>
                 </div>
+            {/* </DialogContent> */}
             </Dialog>
+            </div>
 
 
         }
