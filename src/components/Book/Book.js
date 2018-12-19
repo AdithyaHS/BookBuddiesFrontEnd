@@ -74,7 +74,7 @@ const book = props => {
   </Button>
   }
   return (
-    <Card className="Book" onClick={props.click.bind(props.key)} id={props.key}>
+    <div className="Book" onClick={props.click.bind(props.key)} id={props.key}>
       {ignoreButton}
       {closeButton}
       <CardMedia image={srcImage} src={srcImage} title="Book" />
@@ -100,7 +100,7 @@ const book = props => {
         </div>
 
       </div>
-    </Card>
+    </div>
 
   );
 };
